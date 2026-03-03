@@ -107,3 +107,10 @@ def get_player_profile(username: str):
         predicted_rank=get_specific_rank(prediction["predicted_elo"]),
         player_archetype=prediction["predicted_archetype"]
     )
+
+@app.get("/")
+def read_root():
+    return {
+        "status": "online",
+        "message": "Welcome to the MCSR Ranked Profiler API! We are currently Live!",
+    }
