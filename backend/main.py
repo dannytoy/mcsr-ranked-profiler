@@ -6,13 +6,17 @@ from model_pipeline import predict_pipeline
 
 app = FastAPI(
     title="MCSR Ranked Profiler API",
-    version="1.6.1"
+    version="1.6.2"
 )
+origins = [
+    "https://mcsr-ranked-profiler.vercel.app",
+    "http://localhost:3000",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
+    allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
