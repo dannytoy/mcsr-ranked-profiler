@@ -16,7 +16,7 @@ export default function Home() {
     setProfile(null);
 
     try {
-      const response = await fetch(`http://localhost:8000/profile/${username}`);
+      const response = await fetch(`https://mcsr-profiler-backend.onrender.com/profile/${username}`);
       if (!response.ok) {
         throw new Error('Player not found or not enough data.');
       }
@@ -32,11 +32,11 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center gap-8 text-center">
       <div className="space-y-2">
-        <h1 className="text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-emerald-400 sm:text-5xl md:text-6xl">
           MCSR Ranked Profiler
         </h1>
         <p className="max-w-[600px] text-slate-400 md:text-xl">
-          Enter a username to analyze their playstyle, predict their true Elo, and discover their archetype.
+          Enter a username to analyze their playstyle and predict their Elo.
         </p>
       </div>
 

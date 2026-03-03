@@ -4,3 +4,4 @@ fastapi
 uvicorn
 matplotlib
 seaborn
+requests
