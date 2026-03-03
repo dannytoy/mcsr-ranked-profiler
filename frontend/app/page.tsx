@@ -16,7 +16,7 @@ export default function Home() {
     setProfile(null);
 
     try {
-      const response = await fetch(`https://mcsr-profiler-backend.onrender.com/profile/${username}`);
+      const response = await fetch(`https://mcsr-ranked-profiler-backend.onrender.com/profile/${username}`);
       if (!response.ok) {
         throw new Error('Player not found or not enough data.');
       }
